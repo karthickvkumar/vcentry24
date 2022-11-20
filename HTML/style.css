@@ -1,0 +1,22 @@
+h1{
+  color: rgb(141, 2, 222);
+  background-color: aquamarine;
+  text-align: center;
+  text-decoration-line: underline;
+  text-decoration-color: black;
+  text-decoration-style: solid;
+  text-decoration-thickness: 2px;
+  text-transform: uppercase;
+}
+
+span{
+  background-color: blue;
+  text-decoration: underline wavy;
+}
+
+p{
+  text-indent: 100px;
+  letter-spacing: 8px;
+  line-height: 1.5;
+  word-spacing: 10px;
+}
