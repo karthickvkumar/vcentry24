@@ -1,5 +1,6 @@
 .message-1{
   color: red;
+  border: 3px solid blue;
 }
 
 .message-2{
@@ -22,4 +23,18 @@
   width: 50%;
   height: 50%;
   background-color: black;
+}
+
+.outline{
+  border-style: solid;
+  border-width: 3px;
+  border-color: blue;
+  border-radius: 25px;
+}
+
+.outline-2{
+  border-top-style: solid;
+  border-left-style: dotted;
+  border-bottom-style: double;
+  border-right-style: dashed;
 }
