@@ -11,3 +11,15 @@
   height: 200px;
   background-color: aquamarine;
 }
+
+.box-2{
+  width: 50vw;
+  height: 25vh;
+  background-color: brown;
+}
+
+.percentage{
+  width: 50%;
+  height: 50%;
+  background-color: black;
+}
