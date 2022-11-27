@@ -49,3 +49,16 @@
   margin-top: 65px;
   font-family: 'Dancing Script', cursive;
 }
+
+.body{
+  margin: 0px;
+  background-color: rgb(255, 255, 255);
+  /* background-image: url("./shinchu.jpg"); */
+  background-size: 100vw 100vh;
+  background-repeat: no-repeat;
+}
+
+.inline{
+  display: inline;
+  /* display: none; */
+}
