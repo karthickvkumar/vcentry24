@@ -1,10 +1,13 @@
 .message-1{
   color: red;
   border: 3px solid blue;
+  padding: 40px;
+  margin: 50px;
 }
 
 .message-2{
   color: blueviolet;
+  font-family: 'Dancing Script', cursive;
 }
 
 .box-1{
@@ -30,6 +33,9 @@
   border-width: 3px;
   border-color: blue;
   border-radius: 25px;
+  font-size: 50px;
+  font-style: italic;
+  font-weight: bolder;
 }
 
 .outline-2{
@@ -37,4 +43,9 @@
   border-left-style: dotted;
   border-bottom-style: double;
   border-right-style: dashed;
+  padding-left: 50px;
+  padding-bottom: 30px;
+  margin-left: 100px;
+  margin-top: 65px;
+  font-family: 'Dancing Script', cursive;
 }
