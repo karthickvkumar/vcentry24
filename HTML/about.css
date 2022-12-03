@@ -62,3 +62,34 @@
   display: inline;
   /* display: none; */
 }
+
+.content{
+  width: 300px;
+  height: 100px;
+  border: 3px solid red;
+  overflow: auto;
+  margin-top: 25px;
+}
+
+.top-space{
+  margin: 15px
+}
+
+.table-border {
+  border: 2px solid black;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.th-name{
+  width: 100px;
+}
+
+.th-email{
+  width: 200px;
+}
+
+.table-header{
+  background-color: #009688;
+    color: white;
+}
