@@ -52,7 +52,7 @@
 
 .body{
   margin: 0px;
-  background-color: rgb(255, 255, 255);
+  background-color:aquamarine;
   /* background-image: url("./shinchu.jpg"); */
   background-size: 100vw 100vh;
   background-repeat: no-repeat;
@@ -93,3 +93,27 @@
   background-color: #009688;
     color: white;
 }
+
+@media screen and (min-width : 0px) and (max-width : 480px) {
+  .body{
+    background-color: yellow;
+  }
+}
+
+@media screen and (min-width : 481px) and (max-width : 768px) {
+  .body{
+    background-color: rebeccapurple;
+  }
+}
+
+
+/* 
+Now let’s see some common breakpoints for widths of devices:
+
+320px — 480px: Mobile devices
+481px — 768px: iPads, Tablets
+769px — 1024px: Small screens, laptops
+1025px — 1200px: Desktops, large screens
+1201px and more —  Extra large screens, TV
+
+*/
