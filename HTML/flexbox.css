@@ -29,3 +29,7 @@
   width: 150px;
   margin: 10px;
 }
+
+.btn-danger{
+  background-color: rgb(58, 25, 165) !important;
+}
