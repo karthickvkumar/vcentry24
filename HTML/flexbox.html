@@ -3,10 +3,48 @@
   <head>
     <title>Flexbox Concepts</title>
     <link href="./flexbox.css" rel="stylesheet" />
+    <link href="./bootstrap.css" rel="stylesheet"/>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
   </head>
 
   <body>
+
+    <h1>Bootstrap Buttons</h1>
+    <button type="button" class="btn btn-primary">Primary</button>
+    <button type="button" class="btn btn-secondary">Secondary</button>
+    <button type="button" class="btn btn-success">Success</button>
+    <button type="button" class="btn btn-danger">Danger</button>
+    <button type="button" class="btn btn-warning">Warning</button>
+    <button type="button" class="btn btn-info">Info</button>
+    <button type="button" class="btn btn-light">Light</button>
+    <button type="button" class="btn btn-dark">Dark</button>
+
+    <h1>Bootstrap Carsoule</h1>
+
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./shinchu.jpg" class="d-block w-100">
+        </div>
+        <div class="carousel-item">
+          <img src="./shinchu.jpg" class="d-block w-100">
+        </div>
+        <div class="carousel-item">
+          <img src="./shinchu.jpg" class="d-block w-100">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
     <h1>Flexbox Concepts</h1>
+
 
     <div class="container">
       <div class="item">Item 1</div>
@@ -42,5 +80,7 @@
 
     </div>
 
+    <script src="./bootstrap.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> -->
   </body>
 </html>
