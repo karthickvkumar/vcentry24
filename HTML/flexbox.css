@@ -5,10 +5,27 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  margin-top: 20px;
 }
 
 .content{
   border: 3px solid;
   height: 150px;
   width: 150px;
+}
+
+.container{
+  height: 450px;
+  border: 3px solid red;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  overflow: auto;
+}
+
+.item{
+  border: 3px solid;
+  height: 150px;
+  width: 150px;
+  margin: 10px;
 }
