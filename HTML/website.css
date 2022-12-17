@@ -1,0 +1,31 @@
+.main-container{
+  height: 100vh;
+  border: 2px solid black;
+  box-sizing: border-box;
+}
+
+.body-tag{
+  margin: 0px;
+}
+
+.main-heading{
+  border: 2px solid red;
+    height: 35%;
+    box-sizing: border-box;
+    margin: 10px;
+}
+
+.main-paragraph{
+  border: 2px solid red;
+    box-sizing: border-box;
+    height: 24%;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.main-category{
+  border: 2px solid red;
+    height: 35%;
+    box-sizing: border-box;
+    margin: 10px;
+}
