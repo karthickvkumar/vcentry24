@@ -1,6 +1,6 @@
 .main-container{
   height: 100vh;
-  border: 2px solid black;
+  border: 2px solid red;
   box-sizing: border-box;
 }
 
@@ -13,6 +13,8 @@
     height: 35%;
     box-sizing: border-box;
     margin: 10px;
+    display: flex;
+    flex-direction: row;
 }
 
 .main-paragraph{
@@ -29,3 +31,49 @@
     box-sizing: border-box;
     margin: 10px;
 }
+
+.heading-image{
+  border: 2px solid blue;
+    width: 25%;
+}
+
+.heading-content{
+  border: 2px solid blue;
+    width: 75%;
+}
+
+.heading-title{
+  border: 2px solid #009688;
+    height: 40%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+}
+
+.heading-desc{
+  border: 2px solid #009688;
+  height: 60%;
+  box-sizing: border-box;
+}
+
+.circle-image{
+  border: 2px solid;
+    width: 10%;
+}
+
+.heading-text{
+  border: 2px solid;
+    width: 75%;
+}
+
+.heading-date{
+  width: 15%;
+  border: 2px solid;
+}
+
+.header-text{
+  border: 2px solid red;
+  height: 50%;
+  box-sizing: border-box;
+}
+
