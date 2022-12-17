@@ -30,6 +30,9 @@
     height: 35%;
     box-sizing: border-box;
     margin: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
 .heading-image{
@@ -77,3 +80,26 @@
   box-sizing: border-box;
 }
 
+.category{
+  border: 2px solid;
+  box-sizing: border-box;
+  width: 25%;
+} 
+
+.category-image{
+  border: 2px solid blue;
+    height: 60%;
+    box-sizing: border-box;
+}
+
+.category-heading{
+  border: 2px solid blue;
+    height: 20%;
+    box-sizing: border-box;
+}
+
+.category-desc{
+  border: 2px solid blue;
+  height: 20%;
+  box-sizing: border-box;
+}
