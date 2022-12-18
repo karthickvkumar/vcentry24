@@ -103,3 +103,30 @@
   height: 20%;
   box-sizing: border-box;
 }
+
+
+@media screen and (min-width : 0px) and (max-width : 480px) {
+  .main-category{
+    overflow: auto;
+    display: block;
+  }
+
+  .category{
+    width: 60%;
+    height: 55%;
+    margin-left: 20%;
+    margin-top: 15px;
+  }
+}
+
+@media screen and (min-width : 481px) and (max-width : 912px) {
+  .main-category{
+    flex-wrap: wrap;
+    height: 60%;
+  }
+
+  .category{
+    width: 45%;
+    margin-top: 20px;
+  }
+}
