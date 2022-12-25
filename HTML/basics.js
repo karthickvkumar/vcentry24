@@ -163,3 +163,22 @@ listOfStudent_Information[1].first_name = "Aswin";
 listOfStudent_Information.splice(3, 1);
 
 console.log(listOfStudent_Information);
+
+// Function -> Block of Code 
+
+// Syntax for Creating a Function (Function Definition)
+
+// function function_name(){
+//   coding
+// }
+
+// function_name -> It should be a Proper text value -> a-z, A-Z, 0-9, $, _
+
+// Syntax for Executing/Running a Function (Function Invocation)
+
+// function_name();
+
+function printWelcomeMessage(){
+  var message = "Hello Everyone! Merry Christmas";
+  alert(message);
+};
