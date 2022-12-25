@@ -110,5 +110,56 @@ var listOfStudent_Information = [
     standard : "X"
   }
 ];
-console.log(listOfStudent_Information);
 
+
+// Operation in Array -> 4 Operation => Insert a new value, Read the Value, Edit the exiting value, Delete the value
+
+// Insert a new value into Array
+
+// push() -> Insert a new value at the end of array record
+// array_variable_name.push(value_1, value_2, ... , value_n);
+
+listOfStudent_Information.push({
+    first_name : "Mr.ABC",
+    last_name : "XYZ",
+    age : 24,
+    roll_number : 002454,
+    standard : "YX"
+});
+
+// unshift() -> Insert a new value at the start of array record
+// array_variable_name.unshift(value_1, value_2, ... , value_n);
+
+listOfStudent_Information.unshift({
+  first_name : "Mr.Zyan",
+  last_name : "Malik",
+  age : 24,
+  roll_number : 002454,
+  standard : "YX"
+});
+
+// To Read value from Array
+// array_variable_name[index]
+console.log(listOfStudent_Information[4])
+
+// To edit/update a existing value from Array
+// array_variable_name[index] = value;
+
+listOfStudent_Information[3] = {
+  first_name : "XXXX",
+  last_name : "XXX",
+  age : 00,
+  roll_number : 00000,
+  standard : "XX"
+};
+
+listOfStudent_Information[1].first_name = "Aswin";
+
+// To delete an value 
+// splice() -> Remove a value from specific index of the Array
+
+// array_variable_name.splice(index, deleteCount);
+
+listOfStudent_Information.splice(3, 1);
+
+console.log(listOfStudent_Information);
