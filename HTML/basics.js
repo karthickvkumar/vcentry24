@@ -182,3 +182,25 @@ function printWelcomeMessage(){
   var message = "Hello Everyone! Merry Christmas";
   alert(message);
 };
+
+// Operators
+// 1. Arithmetic Operator  +, -, *, /, %, ++, --
+// 2. Assignment Operator =
+// 3. Comparision Operator <, <=, >, >=, ==, ===, !=, !== 
+// 4. Logical Operator &&, ||, !
+
+// && - AND
+// true && true -> true
+// true && false -> false
+// false && true -> false
+// false && false -> false
+
+// || - OR
+// true || true -> true
+// false || true -> true
+// true || false -> true
+// false || false -> false
+
+// ! - NOT
+// ! true -> false
+// ! false -> true
