@@ -72,3 +72,43 @@ student_information.age = 18;
 delete student_information.first_name;
 
 console.log(student_information);
+
+// Array -> It is a collection of List data, It should contain similar data type.
+
+// Syntax of creating an Array
+
+// var variable_name = [value1, value2, value3,..., valueN];
+
+// value -> Number, String, Boolean, Object, Array, Function
+
+var listOfMarks = [70, 87, 57, 65, 48];
+console.log(listOfMarks);
+
+var listOfNames = ["mr.abc", "mr.csf", "mr.wed", "mr.pods"];
+console.log(listOfNames);
+
+var listOfStudent_Information = [
+  {
+    first_name : "karthick",
+    last_name : "kumar",
+    age : 28,
+    roll_number : 457855,
+    standard : "XII"
+  },
+  {
+    first_name : "Yuvaraj",
+    last_name : "A",
+    age : 29,
+    roll_number : 478542,
+    standard : "XII"
+  },
+  {
+    first_name : "Aswin",
+    last_name : "Kumar",
+    age : 25,
+    roll_number : 332454,
+    standard : "X"
+  }
+];
+console.log(listOfStudent_Information);
+
