@@ -272,3 +272,39 @@ function check_age_category(){
     alert("The person is Super Citizen category");
   }
 }
+
+/*
+Syntax - for (loop)
+for(initialization;  condition; increment/decrement){ 
+  //code block
+}
+*/
+
+for(var count = 1; count <= 10; count++){
+  console.log("Loop is running on count", count);
+}
+
+/*
+Problem: Find even number for given N number of limit.
+Input: 10
+Output: 
+0 is even number
+2 is even number
+4 is even number
+6 is even number
+8 is even number
+
+Solution:
+1. To give last number (Nth number limit) as Input using prompt
+2. Logic for finding even number = Number % 2 => 0
+3. Repeat this logic till 0 to last number
+*/
+
+function print_even_numbers(){
+  var lastnumber = prompt("Enter the Last Number to find Even numbers");
+  for(var startingCount = 0; startingCount <= lastnumber; startingCount++){
+    if(startingCount % 2 === 0){
+      console.log(startingCount, "is a Even Number");
+    }
+  }
+}
