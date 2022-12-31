@@ -232,3 +232,43 @@ function check_voting_status(){
     alert("The Person is NOT eligible for vote");
   }
 }
+
+//Syntax - Multipe if else conditon
+/*
+  if(conditon) {
+    // code block will execute if the condition is Truthy.
+  }
+  else if(condition){
+   // code block will execute if the condition is Truthy
+  }
+  else{
+    // code block will execute if the condition is Falsy.
+  }
+*/
+
+/*
+Problem: Find the person age category?
+Rule for Age category:
+1. Age less then 18 -> The person is Minor category
+2. Age greater then or equal to 18 and less than 60 -> The person is Major category
+3. Age greater then or equal to 60 -> The person is Super Citizen category
+
+Solution:
+1. To give person age as input -> Number
+2. To idenfity -> less then 18 -> The person is Minor category
+3. To idenfity -> greater then or equal to 18 and less than 60 -> The person is Major category
+4. To idenfity -> greater then or equal to 60 -> The person is Super Citizen category
+*/
+
+function check_age_category(){
+  var age = prompt("Enter a person age in number");
+  if(age < 18){
+    alert("The person is Minor category");
+  }
+  else if(age >= 18 && age < 60){
+    alert("The person is Major category");
+  }
+  else{
+    alert("The person is Super Citizen category");
+  }
+}
