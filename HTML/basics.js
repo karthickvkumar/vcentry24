@@ -30,7 +30,7 @@ var student_age = 28;
 var student_roll_number = 45785456;
 var student_standard = "XII";
 
-// Object -> It is a collection of Key and Values
+// Object -> It is a collection of Key and Values or collection of properties
 // Creating an Object
 // synatx 
 
@@ -204,3 +204,31 @@ function printWelcomeMessage(){
 // ! - NOT
 // ! true -> false
 // ! false -> true
+
+// Syntax - if else conditon
+/*
+  if(conditon) {
+    // code block will execute if the condition is Truthy.
+  }
+  else{
+    // code block will execute if the condition is Falsy.
+  }
+*/
+
+/*
+Problem: Find whether a person can Vote ?
+Solution:
+1. We need to provide age(Number - Data type) as input for a program 
+2. If the given age is greater than or equal to 18 -> Output - The Person is eligible for Vote
+3. If the given age is less then 18 -> Output - The Person is NOT eligible for vote
+*/
+
+function check_voting_status(){
+  var age = prompt("Enter a person age in number");
+  if(age >= 18){
+    alert("The Person is eligible for Vote");
+  }
+  else{
+    alert("The Person is NOT eligible for vote");
+  }
+}
