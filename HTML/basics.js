@@ -301,12 +301,18 @@ Solution:
 */
 
 function print_even_numbers(){
-  var lastnumber = prompt("Enter the Last Number to find Even numbers");
-  for(var startingCount = 0; startingCount <= lastnumber; startingCount++){
-    if(startingCount % 2 === 0){
-      console.log(startingCount, "is a Even Number");
+  try{
+    var lastnumber = prompt("Enter the Last Number to find Even numbers");
+    for(var startingCount = 0; startingCount <= lastnumber; startingCount++){
+      if(startingCount % 2 === 0){
+        console.log(startingCount, "is a Even Number");
+      }
     }
   }
+  catch(error){
+    alert("Something went wrong, pls contact admin");
+  }
+  
 }
 
 /*Syntax - Switch Case
@@ -326,32 +332,38 @@ switch(expression){
 // Input: 0 - 6 (starting Sunday, end Saturday)
 
 function findWeekday(){
-  var value = prompt("Enter a number from 0 to 6");
-  var day = parseInt(value);
-  switch(day){
-    case 0:
-      alert("Today is Sunday");
-      break;
-    case 1:
-      alert("Today is Monday");  
-      break;
-    case 2:
-      alert("Today is Tuesday");
-      break;
-    case 3:
-      alert("Today is Wednesday");
-      break;
-    case 4:
-      alert("Today is Thursday");
-      break;
-    case 5:
-      alert("Today is Friday");
-      break;
-    case 6: 
-      alert("Today is Saturday");
-      break;
-    default:
-      alert("Sorry invalid Number, pls try again");
+  try{
+    var value = prompt("Enter a number from 0 to 6");
+    var day = parseInt(value);
+    switch(days){
+      case 0:
+        alert("Today is Sunday");
+        break;
+      case 1:
+        alert("Today is Monday");  
+        break;
+      case 2:
+        alert("Today is Tuesday");
+        break;
+      case 3:
+        alert("Today is Wednesday");
+        break;
+      case 4:
+        alert("Today is Thursday");
+        break;
+      case 5:
+        alert("Today is Friday");
+        break;
+      case 6: 
+        alert("Today is Saturday");
+        break;
+      default:
+        alert("Sorry invalid Number, pls try again");
+    }
+  }
+  catch(error){
+    console.log(error);
+    alert("Something went wrong, pls contact admin");
   }
 }
 
@@ -361,3 +373,66 @@ Errors
 2. Run Time Error
 3. Logical Error
 */
+
+/*
+Annonymous Function (Callback function)
+
+function(){
+
+}
+*/
+
+/*
+Timers
+setTimeout -> Its used to delay the code excution
+syntax:
+setTimeout(function(){
+  code block
+} , time_milliseconds );
+
+1000 ms -> 1 second
+*/
+
+var timerID;
+
+function displayWelcome(){
+  timerID = setTimeout(function() {
+    alert("You have won a Prize Money");
+  }, 5000);
+
+  clearTimeout(timerID);
+}
+
+displayWelcome();
+
+// clearTimeout -> It will stop the setTimeout
+// clearTimeout(setTimeoutID);
+
+/*
+setInterval -> It is used to run a code on the given time interval
+syntax:
+setInterval(function(){
+  code block
+} , time_millisecond);
+*/
+
+var setIntervalID;
+
+function infiniteLoop(){
+  setIntervalID = setInterval(function() {
+    alert("Hey stop me if you can!!");
+  }, 3000);
+}
+
+infiniteLoop();
+
+/*
+clearInterval -> It will stop the time interval
+syntax:
+clearInterval(setIntervalID);
+*/
+
+function stopInterval(){
+  console.log(setIntervalID);
+  clearInterval(setIntervalID);
+}
