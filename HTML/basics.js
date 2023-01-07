@@ -308,3 +308,56 @@ function print_even_numbers(){
     }
   }
 }
+
+/*Syntax - Switch Case
+switch(expression){
+  case value :
+    // code block
+    break;
+  case value :
+    // code block
+    break;
+  default:
+    //code block
+}
+*/
+
+// Problem: To find Weekday?
+// Input: 0 - 6 (starting Sunday, end Saturday)
+
+function findWeekday(){
+  var value = prompt("Enter a number from 0 to 6");
+  var day = parseInt(value);
+  switch(day){
+    case 0:
+      alert("Today is Sunday");
+      break;
+    case 1:
+      alert("Today is Monday");  
+      break;
+    case 2:
+      alert("Today is Tuesday");
+      break;
+    case 3:
+      alert("Today is Wednesday");
+      break;
+    case 4:
+      alert("Today is Thursday");
+      break;
+    case 5:
+      alert("Today is Friday");
+      break;
+    case 6: 
+      alert("Today is Saturday");
+      break;
+    default:
+      alert("Sorry invalid Number, pls try again");
+  }
+}
+
+/*
+Errors
+1. Syntax Error
+2. Run Time Error
+3. Logical Error
+*/
