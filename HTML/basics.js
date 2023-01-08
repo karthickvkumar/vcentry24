@@ -424,7 +424,7 @@ function infiniteLoop(){
   }, 3000);
 }
 
-infiniteLoop();
+// infiniteLoop();
 
 /*
 clearInterval -> It will stop the time interval
@@ -436,3 +436,69 @@ function stopInterval(){
   console.log(setIntervalID);
   clearInterval(setIntervalID);
 }
+/*
+Scope - The way how program access the variable 
+
+Local Scope - Defining a Variable inside a Function 
+Accessibilty - It can be used With in the Function
+
+Global Scope - Defining a variable Outside a Function 
+Accessibility - It can be used Inside any Function
+
+Automatic Global Scope - Defining a variable declaration outside a funciton, but assgning value inside a function
+Accessibility - It can be used Inside any Function
+*/
+
+var main_welcome_message = "Hello Main Message.."
+
+function displayMessage(){
+  var welcome_message = "Hello Everyone!";
+  alert(welcome_message);
+  alert(main_welcome_message);
+}
+
+function printMessage(){
+  // alert(welcome_message);
+  alert(main_welcome_message);
+}
+
+// Local Storage (permanent) -> Set a new value, Read a value, edit value, Delete particular value
+// max size - 13 mb
+
+// syntax -> Set a new value / Edit value
+// localStorage.setItem("key", "value")
+
+localStorage.setItem("username", "Karthick@gmail.com"); 
+
+// syntax -> Read a value
+// localStorage.getItem("key");
+
+localStorage.getItem("username");
+
+// syntax - Remove a particular value
+// localStorage.removeItem(key);
+
+// localStorage.removeItem("username");
+
+// syntax - To clear all values
+// localStorage.clear();
+
+// Session Storage (Temporary) -> Set a new value, Read a value, Delete particular value
+
+// syntax -> Set a new value
+// sessionStorage.setItem("key", "value")
+
+sessionStorage.setItem("username", "Karthick@gmail.com");
+
+// syntax -> Read a value
+// sessionStorage.getItem("key");
+
+sessionStorage.getItem("username");
+
+// syntax - Remove a particular value
+// sessionStorage.removeItem(key);
+
+sessionStorage.removeItem("username");
+
+//syntax - To clear all values
+sessionStorage.clear();
