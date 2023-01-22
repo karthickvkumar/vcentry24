@@ -1,0 +1,9 @@
+.heading-text{
+  color: blue;
+  text-transform: uppercase;
+}
+
+.footer-text{
+  color: crimson;
+  font-style: italic;
+}

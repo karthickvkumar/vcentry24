@@ -1,6 +1,7 @@
 import React from "react";
 import FooterComponent from "./components/footer";
 import HeaderComponent from "./components/header";
+import "./css/style.css";
 
 const App = () => {
   return(
