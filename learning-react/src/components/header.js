@@ -2,7 +2,7 @@ import React from "react";
 
 const HeaderComponent = () => {
   
-  const username = "karthick";
+  const userName = "karthick";
   
   const address = {
     street: "12, AMC Road",
@@ -20,7 +20,7 @@ const HeaderComponent = () => {
 
   return(
     <div>
-      <h2>Welcome back, {username}</h2>
+      <h2>Welcome back, {userName}</h2>
       <button onClick={() => onLogout()}>Logout</button>
       <h3>Location: {address.area}, {address.city}</h3>
 

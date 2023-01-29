@@ -1,15 +1,21 @@
 import React from "react";
-import FooterComponent from "./components/footer";
-import HeaderComponent from "./components/header";
+import {BrowserRouter, Routes, Route} from "react-router-dom";
+
+import HomePage from "./pages/home";
+import ContactPage from "./pages/contact";
+import SettingsPage from "./pages/settings";
+
 import "./css/style.css";
 
 const App = () => {
   return(
-    <div>
-      <HeaderComponent></HeaderComponent>
-      <h1>Welcome to React JS</h1>
-      <FooterComponent></FooterComponent>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="home" element={<HomePage></HomePage>}></Route>
+        <Route path="contact" element={<ContactPage></ContactPage>}></Route>
+        <Route path="settings" element={<SettingsPage></SettingsPage>}></Route>
+      </Routes>
+    </BrowserRouter>
   )
 }
 
