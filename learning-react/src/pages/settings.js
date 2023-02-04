@@ -1,11 +1,16 @@
 import React from "react";
 import HeaderComponent from "../components/header";
+import FooterComponent from "../components/footer";
+
 
 const SettingsPage = () => {
   return(
-    <div>
+    <div className="main-page">
       <HeaderComponent></HeaderComponent>
-      <h1>Welcome to Settings Page</h1>
+      <div className="page-content">
+        <h1>Welcome to Settings Page</h1>
+      </div>
+      <FooterComponent></FooterComponent>
     </div>
   )
 }

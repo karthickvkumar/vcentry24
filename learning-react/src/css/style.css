@@ -13,7 +13,8 @@
   color: white;
   display: flex;
   justify-content: flex-start;
-  align-items: baseline;
+  align-items: center;
+  height: 10%;
 }
 
 .logo{
@@ -31,4 +32,28 @@
   text-decoration: none;
   font-size: 18px;
   font-weight: bolder;
+}
+
+.active-link{
+  text-decoration: underline;
+  color: #ff5722;
+}
+
+.logo{
+  width: 145px;
+  height: 46px;
+}
+
+.footer{
+  height: 5%;
+}
+
+.page-content{
+  height: 80%;
+  overflow: auto;
+}
+
+.main-page{
+  height: 100vh;
+  box-sizing: border-box;
 }

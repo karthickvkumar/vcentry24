@@ -5,15 +5,17 @@ const HeaderComponent = () => {
   return(
     <div className="header">
       <div className="logo">
-        <h3>Website Logo</h3>
+        <img src={require("../images/logo.png")} className="logo" />
       </div>
       <div className="site-menu">
-        <NavLink to="/" className="link">Home</NavLink>
-        <NavLink to="/contact" className="link">Contact</NavLink>
-        <NavLink to="/settings" className="link">Settings</NavLink>
+        <NavLink to="/" className={({isActive}) =>  isActive ? "link active-link" : "link"}>Home</NavLink>
+        <NavLink to="/contact" className={({isActive}) =>  isActive ? "link active-link" : "link"}>Contact</NavLink>
+        <NavLink to="/settings" className={({isActive}) =>  isActive ? "link active-link" : "link"}>Settings</NavLink>
       </div>
     </div>
   )
 }
 
 export default HeaderComponent;
+
+
