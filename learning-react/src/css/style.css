@@ -7,3 +7,28 @@
   color: crimson;
   font-style: italic;
 }
+
+.header{
+  background-color: darkslategray;
+  color: white;
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+}
+
+.logo{
+  width: 25%;
+}
+
+.site-menu{
+  width: 75%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.link{
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bolder;
+}
