@@ -1,8 +1,16 @@
 import React from "react";
+import {useNavigate} from "react-router-dom";
 
 import HeaderComponent from "../components/header";
 
 const SignInPage = () => {
+
+  const navigate = useNavigate(); 
+
+  const validateLogin = () => {
+    navigate("/contact");
+  }
+
   return(
     <div className="main-page">
       <HeaderComponent></HeaderComponent>
@@ -17,7 +25,7 @@ const SignInPage = () => {
           <input className="input" type="password" placeholder="Enter you password"/>
         </div>
         <div>
-          <button className="btn">Login</button>
+          <button className="btn" onClick={() => validateLogin()}>Login</button>
         </div>
       </div>
     </div>
