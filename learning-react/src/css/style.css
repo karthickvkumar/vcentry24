@@ -57,3 +57,31 @@
   height: 100vh;
   box-sizing: border-box;
 }
+
+.btn{
+  font-size: 18px;
+  background-color: #ea7600;
+  color: white;
+  width: 200px;
+  height: 30px;
+}
+
+.space{
+  margin-bottom: 20px;
+}
+
+.form-align{
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.label{
+  width: 185px;
+    display: inline-block;
+    font-size: 18px;
+}
+
+.input{
+  font-size: 18px;
+}

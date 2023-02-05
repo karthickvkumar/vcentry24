@@ -9,8 +9,12 @@ const HeaderComponent = () => {
       </div>
       <div className="site-menu">
         <NavLink to="/" className={({isActive}) =>  isActive ? "link active-link" : "link"}>Home</NavLink>
+
         <NavLink to="/contact" className={({isActive}) =>  isActive ? "link active-link" : "link"}>Contact</NavLink>
+
         <NavLink to="/settings" className={({isActive}) =>  isActive ? "link active-link" : "link"}>Settings</NavLink>
+
+        <NavLink to="/login" className={({isActive}) =>  isActive ? "link active-link" : "link"}>Sign In</NavLink>
       </div>
     </div>
   )
