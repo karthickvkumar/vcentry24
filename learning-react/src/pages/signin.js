@@ -17,7 +17,7 @@ const SignInPage = () => {
   const validateLogin = () => {
     // navigate("/contact");
 
-    //stateVaiable_variableName
+    //To print State Variable -- stateVaiable_variableName
     console.log(loginForm);
   }
 
