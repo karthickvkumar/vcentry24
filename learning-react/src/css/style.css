@@ -102,3 +102,29 @@
   border: 2px solid;
   width: 75%;
 }
+
+.account-form{
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section{
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.form-lable{
+  width: 35%;
+    display: inline-block;
+    font-size: 22px;
+}
+
+.form-input{
+  font-size: 22px;
+}
+
+.textarea-center{
+  display: flex;
+  align-items: center;
+}
