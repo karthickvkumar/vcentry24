@@ -11,14 +11,26 @@ const SettingsPage = () => {
     re_password: "",
     gender: "",
     date_of_birth: "",
-    hobbies: "",
+    hobbies: [],
     education: "",
     location: "",
     address: ""
   });
 
   const handleFormField = (event) => {
-    updateRegister({...registerForm, [event.target.name] : event.target.value});
+    if(event.target.name === "hobbies"){
+      if(event.target.checked){
+        registerForm.hobbies.push(event.target.value);
+      }
+      else{
+        const index = registerForm.hobbies.indexOf(event.target.value);
+        registerForm.hobbies.splice(index, 1);
+      }
+      updateRegister({...registerForm, hobbies : registerForm.hobbies});
+    }
+    else{
+      updateRegister({...registerForm, [event.target.name] : event.target.value});
+    }
   }
 
   const submitRegisterForm = () => {
