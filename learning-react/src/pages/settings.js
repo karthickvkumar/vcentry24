@@ -72,7 +72,9 @@ const SettingsPage = () => {
       ...error, 
       name: (registerForm.name === "") ? true : false,
       password :  (registerForm.password === "") ? true : false,
-      gender : (registerForm.gender === "") ? true : false
+      password_length : registerForm.password.length <= 8 ? true : false,
+      gender : (registerForm.gender === "") ? true : false,
+      hobbies : registerForm.hobbies.length === 0 ? true : false
     })
   }
 
