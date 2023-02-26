@@ -1,9 +1,13 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import HeaderComponent from "../components/header";
 import FooterComponent from "../components/footer";
 import axios from "axios";
 
 const HomePage = () => {
+
+  useEffect(() => {
+    getUserProfile();
+  }, []);
 
   const [userProfiles, UpdateUserList] = useState([]);
 
@@ -17,6 +21,7 @@ const HomePage = () => {
        })
       .catch( (error) => { 
         console.log(error);
+        alert("Somethings went wrong, pls try later");
       })
   }
 
@@ -53,6 +58,12 @@ const HomePage = () => {
                   </tr>
                 )
               })
+            }
+            {
+              userProfiles.length === 0 && 
+              <tr>
+                <td colSpan={5}>No Records Found</td>
+              </tr>
             }
           </tbody>
         </table>
