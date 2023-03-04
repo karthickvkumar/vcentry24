@@ -12,7 +12,10 @@ import InboxPage from "./pages/inbox";
 import SentPage from "./pages/sent";
 import TrashPage from "./pages/trash";
 
+import LoginPage from "./pages/login";
+
 import "./css/style.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => {
   return(
@@ -21,12 +24,13 @@ const App = () => {
         <Route path="" element={<HomePage></HomePage>}></Route>
         <Route path="contact" element={<ContactPage></ContactPage>}></Route>
         <Route path="settings" element={<SettingsPage></SettingsPage>}></Route>
-        <Route path="login" element={<SignInPage></SignInPage>}></Route>
+        <Route path="signin" element={<SignInPage></SignInPage>}></Route>
         <Route path="mail" element={<MailBoxPage></MailBoxPage>}>
           <Route path="inbox" element={<InboxPage></InboxPage>}></Route>
           <Route path="sent" element={<SentPage></SentPage>}></Route>
           <Route path="trash" element={<TrashPage></TrashPage>}></Route>
         </Route>
+        <Route path="login" element={<LoginPage></LoginPage>}></Route>
 
         <Route path="*" element={<PageNotFound></PageNotFound>}></Route>
       </Routes>
