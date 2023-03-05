@@ -14,6 +14,7 @@ const LoginPage = () => {
     email : "",
     password : ""
   });
+  const [invalidCrediential, CheckCredentials] = useState(false);
   
   const viewPasssword = () => {
     controlVisiblity(false);
@@ -34,10 +35,11 @@ const LoginPage = () => {
     axios.post(url, loginForm)
       .then((response) => {
         console.log(response);
+        CheckCredentials(false);
       })
       .catch((error) => {
         console.log(error);
-        alert(error.message);
+        CheckCredentials(true);
       })
   }
   
@@ -63,12 +65,20 @@ const LoginPage = () => {
             { visibilty ? <FaEyeSlash size={"34px"} className="icon" onClick={() => viewPasssword()} /> : <FaEye size={"34px"} className="icon" onClick={() => hidePassword()} /> }
 
             
+           {
+            invalidCrediential && <Form.Text className="red-text">
+            The Email or Password entered is Wrong!
+           </Form.Text>
+           } 
+           
             
           </Form.Group>
           
           <Button variant="primary" onClick={() => submitLoginForm() }>
             Submit
           </Button>
+
+          
         </Form>
 
         </div>

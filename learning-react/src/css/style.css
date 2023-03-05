@@ -176,3 +176,8 @@
 .icon{
   cursor: pointer;
 }
+
+.red-text{
+  color: red !important;
+  font-weight: 500;
+}
