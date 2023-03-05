@@ -181,3 +181,10 @@
   color: red !important;
   font-weight: 500;
 }
+
+.loader{
+  width: 20px !important;
+    height: 20px !important;
+    margin-left: 20px;
+    margin-top: 3px;
+}

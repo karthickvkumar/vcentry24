@@ -6,6 +6,7 @@ import Form from 'react-bootstrap/Form';
 
 import { FaEyeSlash, FaEye } from "react-icons/fa";
 import axios from "axios";
+import Spinner from 'react-bootstrap/Spinner';
 
 const LoginPage = () => {
   
@@ -15,6 +16,7 @@ const LoginPage = () => {
     password : ""
   });
   const [invalidCrediential, CheckCredentials] = useState(false);
+  const [loader, CheckLoader] = useState(false);
   
   const viewPasssword = () => {
     controlVisiblity(false);
@@ -30,16 +32,19 @@ const LoginPage = () => {
 
   const submitLoginForm = () => {
     // console.log(loginForm);
+    CheckLoader(true);
     const url = "https://reqres.in/api/login";
 
     axios.post(url, loginForm)
       .then((response) => {
         console.log(response);
         CheckCredentials(false);
+        CheckLoader(false);
       })
       .catch((error) => {
         console.log(error);
         CheckCredentials(true);
+        CheckLoader(false);
       })
   }
   
@@ -76,6 +81,10 @@ const LoginPage = () => {
           
           <Button variant="primary" onClick={() => submitLoginForm() }>
             Submit
+
+            {loader && <Spinner animation="border" role="status" className="loader">
+              <span className="visually-hidden">Loading...</span>
+            </Spinner>}
           </Button>
 
           
