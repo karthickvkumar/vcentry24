@@ -3,6 +3,7 @@ import HeaderComponent from "../components/header";
 import FooterComponent from "../components/footer";
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import {useNavigate} from "react-router-dom";
 
 import { FaEyeSlash, FaEye } from "react-icons/fa";
 import axios from "axios";
@@ -17,7 +18,8 @@ const LoginPage = () => {
   });
   const [invalidCrediential, CheckCredentials] = useState(false);
   const [loader, CheckLoader] = useState(false);
-  
+  const navigate = useNavigate();
+
   const viewPasssword = () => {
     controlVisiblity(false);
   }
@@ -35,11 +37,14 @@ const LoginPage = () => {
     CheckLoader(true);
     const url = "https://reqres.in/api/login";
 
+    
+
     axios.post(url, loginForm)
       .then((response) => {
         console.log(response);
         CheckCredentials(false);
         CheckLoader(false);
+        navigate("/");
       })
       .catch((error) => {
         console.log(error);
