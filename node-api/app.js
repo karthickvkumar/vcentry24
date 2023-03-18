@@ -1,7 +1,6 @@
 var express = require("express");
 var cors = require("cors");
 var mysql = require("mysql");
-const { query } = require("express");
 
 var app = express();
 var http = require("http").createServer(app);
@@ -13,16 +12,36 @@ app.use(cors({
 
 app.use(express.json());
 
+var connection = mysql.createConnection({
+  host: "localhost",
+  user: "root",
+  password: "Test@123",
+  database: "learning_nodejs",
+  port: 3306
+});
+
+connection.connect((error) => {
+  if(error){
+    throw error;
+  }
+  else{
+    console.log("MySQL Server Connected Successfully");
+  }
+})
+
 // http://localhost:4000/user-list
 app.get("/user-list", (request, response) => {
-  var users = [
-    {name: "Karthick", age: 28},
-    {name: "Kumar", age: 28},
-    {name: "John", age: 28},
-    {name: "Yuvi", age: 28},
-  ];
+  
+  var sqlQuery = "SELECT * FROM user_profile";
 
-  response.status(200).send(users);
+  connection.query(sqlQuery, (error, result) => {
+    if(error){
+      response.status(500).send(error);
+    }
+    else{
+      response.status(200).send(result);
+    }
+  })
 });
 
 
@@ -54,4 +73,11 @@ INSERT INTO user_profile (name, age, address, outOfCountry) VALUES ('Miss,Rose',
 USE learning_nodejs;
 
 SELECT * FROM user_profile;
+
+========================================================
+Authentication ERROR
+
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'Test@123';
+flush privileges;
+
 */
