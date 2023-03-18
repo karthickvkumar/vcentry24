@@ -1,6 +1,7 @@
 var express = require("express");
 var cors = require("cors");
 var mysql = require("mysql");
+const { query } = require("express");
 
 var app = express();
 var http = require("http").createServer(app);
@@ -22,10 +23,26 @@ app.get("/user-list", (request, response) => {
   ];
 
   response.status(200).send(users);
-})
+});
 
 
 var port = process.env.PORT || 4000;
 http.listen(port, () => {
   console.log("THE Node JS Sever is running on PORT 4000");
 });
+
+
+/*SQL QUERY 
+
+CREATE DATABSElearning_nodejs;
+
+USE learning_nodejs;
+
+CREATE TABLE user_profile (name varchar(255), age int(3), address TEXT, outOfCountry boolean);
+
+
+INSERT INTO user_profile (name, age, address, outOfCountry) VALUES ('Mr.Hendry', 26, 'No:12, ECR Road, Chennai', false);
+INSERT INTO user_profile (name, age, address, outOfCountry) VALUES ('Miss,Rose', 22, 'No:12, KYC Road, Chennai', true);
+
+SELECT * FROM user_profile;
+*/
