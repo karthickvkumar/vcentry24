@@ -34,7 +34,7 @@ http.listen(port, () => {
 
 /*SQL QUERY 
 
-CREATE DATABSElearning_nodejs;
+CREATE DATABSE learning_nodejs;
 
 USE learning_nodejs;
 
