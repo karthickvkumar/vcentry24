@@ -36,14 +36,20 @@ http.listen(port, () => {
 
 CREATE DATABASE learning_nodejs;
 
+=========================================
+
 USE learning_nodejs;
 
 CREATE TABLE user_profile (name varchar(255), age int(3), address TEXT, outOfCountry boolean);
+
+=============================================
 
 USE learning_nodejs;
 
 INSERT INTO user_profile (name, age, address, outOfCountry) VALUES ('Mr.Hendry', 26, 'No:12, ECR Road, Chennai', false);
 INSERT INTO user_profile (name, age, address, outOfCountry) VALUES ('Miss,Rose', 22, 'No:12, KYC Road, Chennai', true);
+
+=================================================
 
 USE learning_nodejs;
 
