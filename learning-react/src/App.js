@@ -13,6 +13,7 @@ import SentPage from "./pages/sent";
 import TrashPage from "./pages/trash";
 
 import LoginPage from "./pages/login";
+import StudentProfile from "./pages/profile";
 
 import "./css/style.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -31,6 +32,7 @@ const App = () => {
           <Route path="trash" element={<TrashPage></TrashPage>}></Route>
         </Route>
         <Route path="login" element={<LoginPage></LoginPage>}></Route>
+        <Route path="profile" element={<StudentProfile></StudentProfile>}></Route>
 
         <Route path="*" element={<PageNotFound></PageNotFound>}></Route>
       </Routes>

@@ -19,6 +19,8 @@ const HeaderComponent = () => {
         <NavLink to="/mail" className={({isActive}) =>  isActive ? "link active-link" : "link"}>MailBox</NavLink>
 
         <NavLink to="/login" className={({isActive}) =>  isActive ? "link active-link" : "link"}>Login</NavLink>
+
+        <NavLink to="/profile" className={({isActive}) =>  isActive ? "link active-link" : "link"}>Profile</NavLink>
       </div>
     </div>
   )
