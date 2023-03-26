@@ -84,6 +84,20 @@ const StudentProfile = () => {
     UpdateSaveStudentForm({...saveStudentForm, [event.target.name] : event.target.value});
   }
 
+  const deleteProfile = (value) => {
+    const URL = "http://localhost:4000/delete-student/" + value.serial_number;
+
+    axios.delete(URL)
+      .then((response) => {
+        console.log(response.data);
+        loadStudentProfile();
+        alert("User Profile has been Deteleted");
+      })
+      .catch((error) => {
+        console.log(error)
+      })
+  }
+
   return(
     <div className="main-page">
       <HeaderComponent></HeaderComponent>
@@ -131,9 +145,10 @@ const StudentProfile = () => {
 
                     { editingProfile === value.serial_number ? 
                         <button onClick={() => saveStudentDetils(value)}>Save</button> : 
-                        <button onClick={() => {editStudentDetails(value)}}>Edit</button>
+                        <button onClick={() => editStudentDetails(value)}>Edit</button>
                     }
 
+                    <button className="btn-space" onClick={() => deleteProfile(value)}>Delete</button>
                     
                   </div>
                 )

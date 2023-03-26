@@ -99,6 +99,23 @@ app.put("/edit-student/:id", (request, response) => {
 
 });
 
+// http://localhost:4000/delete-student/2
+app.delete("/delete-student/:id", (request, response) => {
+  var id = request.params.id;
+
+  var sqlQuery = `DELETE FROM students_list WHERE serial_number=${id}`;
+
+  connection.query(sqlQuery, (error, result) => {
+    if(error){
+      response.status(500).send(error);
+    }
+    else{
+      response.status(200).send(result);
+    }
+  })
+
+})
+
 var port = process.env.PORT || 4000;
 http.listen(port, () => {
   console.log("THE Node JS Sever is running on PORT 4000");
