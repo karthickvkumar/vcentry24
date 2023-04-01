@@ -10,7 +10,7 @@ app.use(cors({
   origin: "*"
 }));
 
-app.use(express.json());
+app.use(express.json({limit: '50mb'}));
 
 var connection = mysql.createConnection({
   host: "localhost",
@@ -114,6 +114,36 @@ app.delete("/delete-student/:id", (request, response) => {
     }
   })
 
+})
+
+// http://localhost:4000/create/destination
+app.post("/create/destination", (request, response) => {
+  var requestData = request.body; 
+
+  var sqlQuery = `INSERT INTO test (name, count, image) VALUES ('${requestData.name}', ${requestData.count}, '${requestData.image}')`;
+
+  connection.query(sqlQuery, (error, result) => {
+    if(error){
+      response.status(500).send(error);
+    }
+    else{
+      response.status(200).send(result);
+    }
+  })
+})
+
+// http://localhost:4000/list/destination
+app.get("/list/destination", (request, response) => {
+  var sqlQuery = "SELECT * FROM test";
+
+  connection.query(sqlQuery, (error, result) => {
+    if(error){
+      response.status(500).send(error);
+    }
+    else{
+      response.status(200).send(result);
+    }
+  })
 })
 
 var port = process.env.PORT || 4000;

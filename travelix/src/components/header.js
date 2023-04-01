@@ -1,4 +1,5 @@
 import React from "react";
+import {NavLink} from "react-router-dom";
 
 const HeaderComponent = () => {
   return(
@@ -12,11 +13,21 @@ const HeaderComponent = () => {
 
         <div className="collapse navbar-collapse" id="ftco-nav">
           <ul className="navbar-nav ml-auto">
-            <li className="nav-item active"><a href="index.html" className="nav-link">Home</a></li>
-            <li className="nav-item"><a href="about.html" className="nav-link">About</a></li>
-            <li className="nav-item"><a href="destination.html" className="nav-link">Destination</a></li>
-            <li className="nav-item"><a href="hotel.html" className="nav-link">Hotel</a></li>
-            <li className="nav-item"><a href="contact.html" className="nav-link">Contact</a></li>
+            <span className="nav-item">
+              <NavLink to="/"  className={({isActive}) => isActive ? "nav-link hand-mouse highlight-text" : "nav-link hand-mouse"}>Home</NavLink>
+            </span>
+            <span className="nav-item">
+              <NavLink to="/about" className={({isActive}) => isActive ? "nav-link hand-mouse highlight-text" : "nav-link hand-mouse" }>About</NavLink>
+            </span>
+            <span className="nav-item">
+              <NavLink to="/destination" className={({isActive}) => isActive ? "nav-link hand-mouse highlight-text" : "nav-link hand-mouse"}>Destination</NavLink>
+            </span>
+            <span  className="nav-item">
+              <NavLink to="/hotels" className={({isActive}) => isActive ? "nav-link hand-mouse highlight-text" : "nav-link hand-mouse" }>Hotels</NavLink>
+            </span>
+            <span className="nav-item">
+              <NavLink to="/contact" className={({isActive}) => isActive ? "nav-link hand-mouse highlight-text" : "nav-link hand-mouse" }>Contact</NavLink>
+            </span>
           </ul>
         </div>
       </div>

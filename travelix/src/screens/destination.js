@@ -2,9 +2,40 @@ import React from "react";
 
 import HeaderComponent from "../components/header";
 import TourListComponent from "../components/tour-list";
+import DestinationFilterComponent from "../components/destination-filter";
 import FooterComponent from "../components/footer";
 
 const DestinationScreen = () => {
+
+  // MOCK DATA
+  const tourList = [
+    {
+      destinationName : "India",
+      destinationImage : "https://holidify.com/images/bgImages/INDIA.jpg",
+      destinationCount : 25
+    },
+    {
+      destinationName : "Singapore",
+      destinationImage : "https://d2rdhxfof4qmbb.cloudfront.net/wp-content/uploads/20180221131008/iStock-627935066.jpg",
+      destinationCount : 8
+    },
+    {
+      destinationName : "Maldives",
+      destinationImage : "https://static.india.com/wp-content/uploads/2020/06/Maldives1.jpg",
+      destinationCount : 4
+    },
+    {
+      destinationName : "Malaysia",
+      destinationImage : "https://holidify.com/images/bgImages/MALAYSIA.jpg",
+      destinationCount : 10
+    },
+    {
+      destinationName : "Dubai",
+      destinationImage : "https://www.hoteliermiddleeast.com/cloud/2021/12/12/dubai-tourism-news-2021.jpg",
+      destinationCount : 15
+    }
+  ]
+
   return(
     <div>
       <HeaderComponent></HeaderComponent>
@@ -28,37 +59,7 @@ const DestinationScreen = () => {
           <div class="row">
             <div class="col-md-12">
               <div class="search-wrap-1">
-                <form action="#" class="search-property-1">
-                  <div class="row no-gutters">
-                    <div class="col-lg d-flex">
-                      <div class="form-group p-4 border-0">
-                        <label for="#">Destination</label>
-                        <div class="form-field">
-                          <div class="icon"><span class="fa fa-search"></span></div>
-                          <input type="text" class="form-control" placeholder="Search place" />
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-lg d-flex">
-                      <div class="form-group p-4 border-0">
-                        <label for="#">Location/Area</label>
-                        <div class="form-field">
-                          <div class="icon"><span class="fa fa-location-arrow"></span></div>
-                          <input type="text" class="form-control" placeholder="Search place" />
-                        </div>
-                      </div>
-                    </div>
-                    
-                    
-                    <div class="col-lg d-flex">
-                      <div class="form-group d-flex w-100 border-0">
-                        <div class="form-field w-100 align-items-center d-flex">
-                          <input type="submit" value="Search" class="align-self-stretch form-control btn btn-primary" />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </form>
+                <DestinationFilterComponent></DestinationFilterComponent>
               </div>
             </div>
           </div>
@@ -68,21 +69,14 @@ const DestinationScreen = () => {
       <section class="ftco-section">
         <div class="container">
             <div class="row">
-              <TourListComponent></TourListComponent>
-              <TourListComponent></TourListComponent>
-              <TourListComponent></TourListComponent>
-
-              <TourListComponent></TourListComponent>
-              <TourListComponent></TourListComponent>
-              <TourListComponent></TourListComponent>
-
-              <TourListComponent></TourListComponent>
-              <TourListComponent></TourListComponent>
-              <TourListComponent></TourListComponent>
-
-              <TourListComponent></TourListComponent>
-              <TourListComponent></TourListComponent>
-              <TourListComponent></TourListComponent>
+              {
+                tourList.map((value, index) => {
+                  return(
+                    <TourListComponent {...value}></TourListComponent>
+                  )
+                })
+              }
+              
             </div>
           </div>
       </section>
