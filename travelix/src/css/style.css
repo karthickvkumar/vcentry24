@@ -10078,6 +10078,15 @@ textarea.form-control {
   color: #f15d30 !important;
 }
 
+.sq-image{
+  width: 75px;
+}
+
+.table{
+  border: 2px solid black;
+  border-collapse: collapse;
+}
+
 .input-container input {
   border: none;
   box-sizing: border-box;
