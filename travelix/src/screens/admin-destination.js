@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 import axios from "axios";
 
-const AdminPage = () => {
+const AdminDestinationPage = () => {
 
   useEffect(() => {
     listDestinations();
@@ -56,6 +56,19 @@ const AdminPage = () => {
       })
   }
 
+  const deleteDestination = (value) => {
+    var url = "http://localhost:4000/delete/destionation/" + value.id;
+
+    axios.delete(url)
+      .then((response) => {
+        alert(response.data);
+        listDestinations();
+      })
+      .catch((error) => {
+        console.log(error);
+      })
+  }
+
   return(
     <div>
       <h1>Admin Page</h1>
@@ -93,6 +106,9 @@ const AdminPage = () => {
                     <img src={value.destinationImage} className="sq-image"/>
                   </td>
                   <td className="table">{value.destinationCount}</td>
+                  <td className="table">
+                    <button onClick={() => deleteDestination(value)}>Delete</button>
+                  </td>
                 </tr>
               )
             })
@@ -104,4 +120,4 @@ const AdminPage = () => {
   )
 }
 
-export default AdminPage;
+export default AdminDestinationPage;
