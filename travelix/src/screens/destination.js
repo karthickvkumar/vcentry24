@@ -1,36 +1,45 @@
-import React from "react";
+import React, {useContext} from "react";
 
 import HeaderComponent from "../components/header";
 import TourListComponent from "../components/tour-list";
 import DestinationFilterComponent from "../components/destination-filter";
 import FooterComponent from "../components/footer";
 
+import SharingContext from "../context/data-context";
+
 const DestinationScreen = () => {
+
+  const context = useContext(SharingContext);
 
   // MOCK DATA
   const tourList = [
     {
-      destinationName : "India",
+      destinationName : "Temple",
+      destinationLocation : "India",
       destinationImage : "https://holidify.com/images/bgImages/INDIA.jpg",
       destinationCount : 25
     },
     {
       destinationName : "Singapore",
+      destinationLocation : "Singapore",
       destinationImage : "https://d2rdhxfof4qmbb.cloudfront.net/wp-content/uploads/20180221131008/iStock-627935066.jpg",
       destinationCount : 8
     },
     {
       destinationName : "Maldives",
+      destinationLocation : "Maldives",
       destinationImage : "https://static.india.com/wp-content/uploads/2020/06/Maldives1.jpg",
       destinationCount : 4
     },
     {
-      destinationName : "Malaysia",
+      destinationName : "Nature",
+      destinationLocation : "Malaysia",
       destinationImage : "https://holidify.com/images/bgImages/MALAYSIA.jpg",
       destinationCount : 10
     },
     {
-      destinationName : "Dubai",
+      destinationName : "Adventure",
+      destinationLocation : "Dubai",
       destinationImage : "https://www.hoteliermiddleeast.com/cloud/2021/12/12/dubai-tourism-news-2021.jpg",
       destinationCount : 15
     }
@@ -70,9 +79,9 @@ const DestinationScreen = () => {
         <div class="container">
             <div class="row">
               {
-                tourList.map((value, index) => {
+                context.data.map((value, index) => {
                   return(
-                    <TourListComponent {...value}></TourListComponent>
+                    <TourListComponent {...value} key={index}></TourListComponent>
                   )
                 })
               }

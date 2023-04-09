@@ -103,7 +103,7 @@ const HomeScreen = () => {
           {
                 tourList.map((value, index) => {
                   return(
-                    <TourListComponent {...value}></TourListComponent>
+                    <TourListComponent {...value} key={index}></TourListComponent>
                   )
                 })
               }

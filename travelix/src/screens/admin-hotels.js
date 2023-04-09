@@ -32,7 +32,7 @@ const AdmimHotelsPage = () => {
   };
 
   const addHotel = () => {
-    const url = "http://localhost:4000/create/hotel";
+    const url = "https://travelix-backend.onrender.com/create/hotel";
 
     axios.post(url, hotelForm)
       .then((response) => {
@@ -46,7 +46,7 @@ const AdmimHotelsPage = () => {
   }
 
   const listHotels = () =>  {
-    const url = "http://localhost:4000/list/hotels";
+    const url = "https://travelix-backend.onrender.com/list/hotels";
 
     axios.get(url)
       .then((response) => {
@@ -58,7 +58,7 @@ const AdmimHotelsPage = () => {
   }
 
   const deleteHotel = (value) => {
-    var url = "http://localhost:4000/delete/hotel/" + value.id;
+    var url = "https://travelix-backend.onrender.com/delete/hotel/" + value.id;
 
     axios.delete(url)
       .then((response) => {

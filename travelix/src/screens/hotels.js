@@ -1,11 +1,15 @@
-import React from "react";
+import React, {useContext} from "react";
 
 import HeaderComponent from "../components/header";
 import HotelListComponent from "../components/hotel-list";
 import HotelFilterComponent from "../components/hotel-filter";
 import FooterComponent from "../components/footer";
+import SharingContext from "../context/data-context";
 
 const HotelsScreen = () => {
+
+  const context = useContext(SharingContext);
+
 
   const hotelList = [
     {
@@ -57,9 +61,9 @@ const HotelsScreen = () => {
       <div class="container">
           <div class="row">
             {
-              hotelList.map((value, index) => {
+              context.data.map((value, index) => {
                 return(
-                  <HotelListComponent {...value}></HotelListComponent>
+                  <HotelListComponent {...value} key={index}></HotelListComponent>
                 )
               })
             }

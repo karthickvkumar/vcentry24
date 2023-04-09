@@ -9,6 +9,7 @@ const AdminDestinationPage = () => {
 
   const [destinationForm, updateDestination] = useState({
     destinationName : "",
+    destinationLocation : "",
     destinationImage : "",
     destinationCount : ""
   });
@@ -31,7 +32,7 @@ const AdminDestinationPage = () => {
   }
 
   const addDestination = () => {
-   const url = "http://localhost:4000/create/destination";
+   const url = "https://travelix-backend.onrender.com/create/destination";
 
     axios.post(url, destinationForm)
       .then((response) => {
@@ -45,7 +46,7 @@ const AdminDestinationPage = () => {
   }
 
   const listDestinations = () =>  {
-    const url = "http://localhost:4000/list/destinations";
+    const url = "https://travelix-backend.onrender.com/list/destinations";
 
     axios.get(url)
       .then((response) => {
@@ -57,7 +58,7 @@ const AdminDestinationPage = () => {
   }
 
   const deleteDestination = (value) => {
-    var url = "http://localhost:4000/delete/destionation/" + value.id;
+    var url = "https://travelix-backend.onrender.com/delete/destionation/" + value.id;
 
     axios.delete(url)
       .then((response) => {
@@ -79,6 +80,10 @@ const AdminDestinationPage = () => {
           <input type="text" placeholder="Enter destination name" onChange={handleInput} name="destinationName"/>
         </div>
         <div>
+          <label>Enter Destination Location</label>
+          <input type="text" placeholder="Enter destination Location" onChange={handleInput} name="destinationLocation"/>
+        </div>
+        <div>
           <label>Choose Destination Image</label>
           <input type="file" onChange={uploadImage} name="destinationImage"/>
         </div>
@@ -92,6 +97,7 @@ const AdminDestinationPage = () => {
         <thead>
           <tr>
             <th className="table">Destination Name</th>
+            <th className="table">Destination Location</th>
             <th className="table">Destination Image</th>
             <th className="table">Destination Count</th>
             <th className="table">Action</th>
@@ -102,6 +108,7 @@ const AdminDestinationPage = () => {
               return(
                 <tr key={index}>
                   <td className="table">{value.destinationName}</td>
+                  <td className="table">{value.destinationLocation}</td>
                   <td className="table">
                     <img src={value.destinationImage} className="sq-image"/>
                   </td>

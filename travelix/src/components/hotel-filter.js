@@ -1,6 +1,13 @@
-import React, {useState} from "react";
+import React, {useState, useContext} from "react";
+import axios from "axios";
+import {useNavigate} from "react-router-dom";
+
+import SharingContext from "../context/data-context";
 
 const HotelFilterComponent = () => {
+
+  const context = useContext(SharingContext);
+  const navigate = useNavigate();
 
   const [hotelFilter, updateHoteFilter] = useState({
     destinationName : "",
@@ -14,7 +21,17 @@ const HotelFilterComponent = () => {
   }
 
   const submitHotelFilter = () => {
-    console.log(hotelFilter);
+    const url = `https://travelix-backend.onrender.com/list/hotels?hotelLocation=${hotelFilter.destinationName}`;
+
+    axios.get(url)
+      .then((response) => {
+        context.dataExchange(response.data);
+        navigate("/hotels");
+      })
+      .catch((error) => {
+        console.log(error);
+      })
+
   }
 
   return(

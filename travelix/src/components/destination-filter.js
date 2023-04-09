@@ -1,10 +1,17 @@
-import React, {useState} from "react";
+import React, {useState, useContext} from "react";
+import axios from "axios";
+import SharingContext from "../context/data-context";
+import {useNavigate} from "react-router-dom";
 
 const DestinationFilterComponent = () => {
 
+  const context = useContext(SharingContext);
+
+  const navigate = useNavigate();
+
   const [destinationFilter, updateDestinatinFilter] = useState({
     destinationName : "",
-    location: ""
+    destinationLocation: ""
   })
 
   const handleForm = (event) => {
@@ -12,7 +19,20 @@ const DestinationFilterComponent = () => {
   }
 
   const submitDestinationFilter = () => {
-    console.log(destinationFilter);
+    // console.log(destinationFilter);
+    const url = `https://travelix-backend.onrender.com/list/destinations?destinationName=${destinationFilter.destinationName}&destinationLocation=${destinationFilter.destinationLocation}`;
+
+    axios.get(url)
+      .then((response) => {
+        console.log(response.data);
+
+        context.dataExchange(response.data);
+
+        navigate('/destination');
+      })
+      .catch((error) => {
+        console.log(error);
+      })
   }
 
   return(
@@ -33,7 +53,7 @@ const DestinationFilterComponent = () => {
             <label htmlFor="/">Location/Area</label>
             <div className="form-field">
               <div className="icon"><span className="fa fa-location-arrow"></span></div>
-              <input type="text" className="form-control" placeholder="Search place" onChange={handleForm} name="location" />
+              <input type="text" className="form-control" placeholder="Search place" onChange={handleForm} name="destinationLocation" />
             </div>
           </div>
         </div>
